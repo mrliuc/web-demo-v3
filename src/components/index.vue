@@ -3,18 +3,6 @@
   </div>
 </template>
 
-    // <script type="text/javascript" src="../static/javascript/Polyfill.js"></script>
-    // <script type="text/javascript" src="../static/javascript/mod.js"></script>
-    // <script type="text/javascript" src="../static/javascript/reflux.min.js"></script>
-    // <script type="text/javascript" src="../static/javascript/jquery.min.js"></script>
-    // <script type="text/javascript" src="../static/javascript/jquery.cookie.js"></script>
-    // <script type="text/javascript" src="../static/bootstrap/js/bootstrap.min.js"></script>
-    // <script type="text/javascript" src="../static/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
-    // <script type="text/javascript" src="../static/bootstrap/js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
-    // <script type="text/javascript" src="../static/icheck-1.x/icheck.min.js"></script>
-    // <script type="text/javascript" src="../script/modules/common/views/manager_content.js"></script>
-    // <script type="text/javascript" src="../script/common/mapControl.js"></script>
-    // <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=CdYaUW1Ld8mGo4R8EvoQt5qZjqH1BctY&callback=mapControl.initMap"></script>
 <script>
 
 import $script from 'scriptjs'
@@ -27,11 +15,9 @@ import React from 'react';
 import {render} from 'react-dom';
 
 export default {
-  name: 'HelloWorld',
+  name: 'vue-trace',
   data() {
     return {
-      msg: 'Welcome to Your Vue.js App',
-
       locations:[{
 	"loc_time": 1532034392,
 	"latitude": 31.326078796084,
@@ -5650,7 +5636,7 @@ export default {
   mounted() {
     //  $script(['../static/javascript/jquery.min.js'], () => {
 
-$script(['http://api.map.baidu.com/api?v=2.0&ak=CdYaUW1Ld8mGo4R8EvoQt5qZjqH1BctY&callback=mapControl.initMap'])
+$script(['http://api.map.baidu.com/api?v=2.0&ak=&callback=mapControl.initMap'])
       // });
 //      $script(['../static/javascript/jquery.min.js'], () => {
 //       $script(['../static/bootstrap/js/bootstrap.min.js',
@@ -5665,7 +5651,7 @@ $script(['http://api.map.baidu.com/api?v=2.0&ak=CdYaUW1Ld8mGo4R8EvoQt5qZjqH1BctY
 //       // '../static/javascript/reflux.min.js',
 //       // '../script/modules/common/views/manager_content.js',
 //       // '../script/common/mapControl.js',
-//       'http://api.map.baidu.com/api?v=2.0&ak=CdYaUW1Ld8mGo4R8EvoQt5qZjqH1BctY&callback=mapControl.initMap',], () => {
+//       'http://api.map.baidu.com/api?v=2.0&ak=&callback=mapControl.initMap',], () => {
 
 // // console.log(ManagerContent)
 //                    render(

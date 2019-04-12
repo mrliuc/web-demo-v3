@@ -12,6 +12,8 @@
 // import ZoomControl from 'zoomControl'
 import TrackAction from '../modules/trackcontrol/actions/trackAction';
 
+import CanvasLayer from './CanvasLayer'
+
 window.mapControl = {
     /**
      * 初始化地图
@@ -22,9 +24,12 @@ window.mapControl = {
         let infoBoxScript = document.createElement('script');
         infoBoxScript.src = 'http://api.map.baidu.com/library/InfoBox/1.2/src/InfoBox_min.js';
         document.getElementsByTagName('head')[0].appendChild(infoBoxScript);
-        let canvasScript = document.createElement('script');
-        canvasScript.src = __uri('/static/javascript/CanvasLayer.js');
-        document.getElementsByTagName('head')[0].appendChild(canvasScript);
+        // let canvasScript = document.createElement('script');
+        // canvasScript.src = '../../static/javascript/CanvasLayer.js';
+        // document.getElementsByTagName('head')[0].appendChild(canvasScript);
+        // require('../../static/javascript/CanvasLayer.js')
+        CanvasLayer.init();
+        
         let mapvScript = document.createElement('script');
         mapvScript.src = 'http://mapv.baidu.com/build/mapv.js';
         document.getElementsByTagName('head')[0].appendChild(mapvScript);
@@ -32,11 +37,15 @@ window.mapControl = {
             that.initBoundsearch();
         };
         window.map = new BMap.Map("mapContainer", {enableMapClick: false});    // 创建Map实例
-        map.centerAndZoom(new BMap.Point(116.404, 39.915), 10);  // 初始化地图,设置中心点坐标和地图级别
+        map.centerAndZoom('上海');
+        // map.centerAndZoom(new BMap.Point(116.404, 39.915), 10);  // 初始化地图,设置中心点坐标和地图级别
         map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
         // this.initLocation();
         this.initControl();
         this.initOverlay();
+
+
+
     },
 
     initBoundsearch() {
